@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Ferreira Construcciones | Construcción, reparación y mantenimiento</title>
+<meta name="description" content="Empresa de construcción con más de 15 años en el rubro. Construcción, reparación, mantenimiento y soluciones en altura. Presupuestos y garantías por escrito.">
+<meta name="theme-color" content="#0F172A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script>document.documentElement.classList.add('js')</script>
+<style type="text/tailwindcss">
+  @theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
+    --color-primary: #64748B;
+    --color-on-primary: #FFFFFF;
+    --color-secondary: #94A3B8;
+    --color-on-secondary: #0F172A;
+    --color-accent: #EA580C;
+    --color-accent-ink: #C2410C;
+    --color-on-accent: #0F172A;
+    --color-bg: #F8FAFC;
+    --color-fg: #334155;
+    --color-card: #FFFFFF;
+    --color-line: #E2E8F0;
+    --color-muted: #EBF0F5;
+    --color-muted-fg: #475569;
+    --color-danger: #DC2626;
+    --color-ink: #0F172A;
+  }
+
+  .hatch {
+    background-color: #0F172A;
+    background-image:
+      linear-gradient(150deg, rgba(30,41,59,.95) 0%, rgba(15,23,42,.98) 55%, rgba(11,18,32,1) 100%),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.07) 0 8px, transparent 8px 18px);
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .field {
+    width: 100%;
+    border: 1px solid var(--color-line);
+    border-radius: .5rem;
+    background: #FFFFFF;
+    padding: .75rem .875rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color-ink);
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .field::placeholder { color: #94A3B8; }
+  .field:hover { border-color: #CBD5E1; }
+  .field:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-color: var(--color-accent);
+  }
+  .field[aria-invalid="true"] { border-color: var(--color-danger); }
+  .field[aria-invalid="true"]:focus-visible { outline-color: var(--color-danger); }
+
+  .js .reveal { opacity: 0; transform: translateY(18px); }
+  .js .reveal.is-in { opacity: 1; transform: none; }
+  .reveal { transition: opacity .6s ease, transform .6s ease; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+  .anim-rise { animation: rise .7s cubic-bezier(.22,.61,.36,1) both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within { scroll-behavior: auto; }
+    *, ::before, ::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body class="bg-bg font-sans text-fg antialiased selection:bg-accent selection:text-on-accent">
+
+<a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-ink focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white">Ir al contenido</a>
+
+<svg aria-hidden="true" focusable="false" class="hidden">
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-helmet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2Z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a8 8 0 0 1 16 0v3"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9Z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0l-4.6-4.6a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4Z"/><path d="m7.5 10.5 2 2M10.5 7.5l2 2M13.5 4.5l2 2M4.5 13.5l2 2"/></symbol>
+</svg>
+
+<header class="sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <a href="#inicio" class="flex items-center gap-3">
+      <span class="flex h-10 w-10 items-center justify-center rounded-md bg-accent font-mono text-sm font-bold tracking-tight text-on-accent">MF</span>
+      <span class="leading-tight">
+        <span class="block text-sm font-bold tracking-tight text-white">Martin Ferreira</span>
+        <span class="block font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Construcciones</span>
+      </span>
+    </a>
+
+    <nav aria-label="Principal" class="hidden items-center gap-8 md:flex">
+      <a href="#servicios" class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white">Servicios</a>
+      <a href="#nosotros" class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white">Nosotros</a>
+      <a href="#trabajos" class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white">Trabajos</a>
+      <a href="#contacto" class="text-sm font-medium text-slate-300 transition-colors duration-200 hover:text-white">Contacto</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="#contacto" class="hidden min-h-11 items-center justify-center rounded-md bg-accent px-5 text-sm font-semibold text-on-accent transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:inline-flex">Pedir presupuesto</a>
+      <button id="nav-toggle" type="button" class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-md border border-white/15 text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:hidden" aria-expanded="false" aria-controls="nav-movil" aria-label="Abrir menú">
+        <svg class="h-5 w-5" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="nav-movil" class="hidden border-t border-white/10 bg-ink md:hidden">
+    <nav aria-label="Menú móvil" class="mx-auto flex max-w-7xl flex-col px-4 py-2 sm:px-6">
+      <a href="#servicios" class="min-h-11 border-b border-white/10 py-3 text-sm font-medium text-slate-200">Servicios</a>
+      <a href="#nosotros" class="min-h-11 border-b border-white/10 py-3 text-sm font-medium text-slate-200">Nosotros</a>
+      <a href="#trabajos" class="min-h-11 border-b border-white/10 py-3 text-sm font-medium text-slate-200">Trabajos</a>
+      <a href="#contacto" class="min-h-11 py-3 text-sm font-medium text-slate-200">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section id="inicio" class="relative overflow-hidden bg-ink">
+    <div class="grid-lines absolute inset-0" aria-hidden="true"></div>
+    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-16 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-28 lg:pt-24">
+      <div class="lg:col-span-7">
+        <p class="anim-rise inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-300">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+          15+ anos en el rubro
+        </p>
+
+        <h1 class="anim-rise mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl" style="animation-delay:.08s">Construcción, reparación y mantenimiento</h1>
+
+        <p class="anim-rise mt-4 font-serif text-2xl italic text-accent sm:text-3xl" style="animation-delay:.14s">Soluciones en altura</p>
+
+        <p class="anim-rise mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg" style="animation-delay:.2s">Empresa de construcción con más de 15 años de trayectoria. Hacemos obras, reparamos y mantenemos, y entregamos cada trabajo con <strong class="font-semibold text-white">presupuesto y garantía por escrito</strong>.</p>
+
+        <div class="anim-rise mt-9 flex flex-col gap-3 sm:flex-row" style="animation-delay:.26s">
+          <a href="#contacto" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-on-accent transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Pedir presupuesto gratis<svg class="h-4 w-4" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a href="#trabajos" class="inline-flex min-h-12 items-center justify-center rounded-md border border-white/25 px-6 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Ver trabajos</a>
+        </div>
+
+        <dl class="anim-rise mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-4" style="animation-delay:.32s">
+          <div>
+            <dt class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Experiencia</dt>
+            <dd class="mt-1 text-3xl font-extrabold tracking-tight text-white">15<span class="text-accent-ink">+</span></dd>
+            <dd class="text-sm text-slate-400">años en construcción</dd>
+          </div>
+          <div>
+            <dt class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Presupuestos</dt>
+            <dd class="mt-1 text-3xl font-extrabold tracking-tight text-white">100<span class="text-accent-ink">%</span></dd>
+            <dd class="text-sm text-slate-400">por escrito</dd>
+          </div>
+          <div>
+            <dt class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Garantía</dt>
+            <dd class="mt-1 text-3xl font-extrabold tracking-tight text-white">Total</dd>
+            <dd class="text-sm text-slate-400">en cada obra</dd>
+          </div>
+          <div>
+            <dt class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Áreas</dt>
+            <dd class="mt-1 text-3xl font-extrabold tracking-tight text-white">4</dd>
+            <dd class="text-sm text-slate-400">especialidades</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="lg:col-span-5">
+        <figure class="anim-rise relative overflow-hidden rounded-xl border border-white/10" style="animation-delay:.3s">
+          <div class="hatch grid-lines aspect-[4/5] w-full"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 border-t border-white/10 bg-ink/85 px-5 py-4 backdrop-blur">
+            <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-300">Obra en curso</span>
+            <span class="text-sm font-semibold text-white">Fachada en altura</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" aria-labelledby="servicios-t" class="border-b border-line bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div class="reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-ink">01 / Qué hacemos</p>
+          <h2 id="servicios-t" class="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Un solo equipo para toda la obra</h2>
+        </div>
+        <p class="max-w-md text-base leading-relaxed text-muted-fg">De la demolición al último detalle: nos encargamos del proyecto completo o de una etapa puntual.</p>
+      </div>
+
+      <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="reveal rounded-xl border border-line bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-ink"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-building"/></svg></span>
+          <h3 class="mt-5 text-lg font-bold text-ink">Construcción</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-fg">Obras nuevas, ampliaciones y reforma integral, con proyecto completo y dirección de obra.</p>
+        </li>
+        <li class="reveal rounded-xl border border-line bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-ink"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+          <h3 class="mt-5 text-lg font-bold text-ink">Reparación</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-fg">Estructuras, impermeabilización, cubierta, instalaciones y terminaciones existentes.</p>
+        </li>
+        <li class="reveal rounded-xl border border-line bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-ink"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-helmet"/></svg></span>
+          <h3 class="mt-5 text-lg font-bold text-ink">Mantenimiento</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-fg">Planes de mantenimiento para edificios, locales y espacios comunes.</p>
+        </li>
+        <li class="reveal rounded-xl border border-line bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-ink"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-ruler"/></svg></span>
+          <h3 class="mt-5 text-lg font-bold text-ink">Soluciones en altura</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted-fg">Andamios, plataformas, seguridad y trabajos de fachada con personal habilitado.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="nosotros" aria-labelledby="nosotros-t" class="border-b border-line bg-bg">
+    <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-24">
+      <div class="reveal lg:col-span-7">
+        <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-ink">02 / Nosotros</p>
+        <h2 id="nosotros-t" class="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Más de 15 años construyendo con las mismas reglas</h2>
+
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-muted-fg sm:text-lg">
+          <p>Martin Ferreira Construcciones es una empresa familiar del rubro con más de 15 años de trayectoria. Ese tiempo no nos dejó improvisando: nos dejó un método. Visitamos, medimos, presupuestamos por escrito y recién ahí empezamos.</p>
+          <p>Trabajamos con documentación clara y plazos definidos. Si algo se corre, se avisa antes. Si algo sale mal, se arregla dentro de la garantía acordada por escrito.</p>
+          <p>Nos especializamos además en trabajos en altura con equipos, andamios y personal habilitado, uno de los puntos donde más falla la seguridad en obra.</p>
+        </div>
+
+        <dl class="mt-10 grid gap-6 sm:grid-cols-2">
+          <div class="rounded-xl border border-line bg-card p-5">
+            <dt class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-fg">Compromiso</dt>
+            <dd class="mt-2 text-sm leading-relaxed text-ink">Presupuesto detallado y garantía por escrito en el 100% de los trabajos que hacemos.</dd>
+          </div>
+          <div class="rounded-xl border border-line bg-card p-5">
+            <dt class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-fg">Seguridad</dt>
+            <dd class="mt-2 text-sm leading-relaxed text-ink">Elementos de protección personal, señalización y protocolos de trabajo en altura.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="reveal lg:col-span-5">
+        <figure class="relative overflow-hidden rounded-xl border border-line">
+          <div class="hatch grid-lines aspect-[4/3] w-full"></div>
+          <figcaption class="border-t border-line bg-card px-5 py-4">
+            <span class="block font-mono text-[11px] uppercase tracking-[0.18em] text-muted-fg">Equipo</span>
+            <span class="mt-1 block text-sm font-semibold text-ink">Oficina técnica + cuadrillas propias</span>
+          </figcaption>
+        </figure>
+
+        <div class="mt-4 rounded-xl border border-accent/40 bg-accent/5 p-5">
+          <div class="flex items-start gap-4">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent text-on-accent"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <div>
+              <h3 class="text-base font-bold text-ink">Presupuesto y garantía por escrito</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Antes de empezar, queda por escrito qué incluye, cuánto cuesta, en qué plazo y qué cubre la garantía. Sin sorpresas después.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabajos" aria-labelledby="trabajos-t" class="border-b border-line bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-ink">03 / Trabajos</p>
+          <h2 id="trabajos-t" class="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Obras y reparaciones recientes</h2>
+        </div>
+        <p class="max-w-md text-base leading-relaxed text-muted-fg">Una muestra del tipo de trabajo que hacemos. Cada foto es reemplazable por imágenes reales de tus obras.</p>
+      </div>
+
+      <div class="reveal mt-8 flex flex-wrap gap-2" role="group" aria-label="Filtrar trabajos por especialidad">
+        <button type="button" data-filtro="todos" aria-pressed="true" class="filtro min-h-11 cursor-pointer rounded-full border border-ink bg-ink px-4 text-sm font-semibold text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Todos</button>
+        <button type="button" data-filtro="construccion" aria-pressed="false" class="filtro min-h-11 cursor-pointer rounded-full border border-line bg-card px-4 text-sm font-semibold text-ink transition-colors duration-200 hover:border-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Construcción</button>
+        <button type="button" data-filtro="reparacion" aria-pressed="false" class="filtro min-h-11 cursor-pointer rounded-full border border-line bg-card px-4 text-sm font-semibold text-ink transition-colors duration-200 hover:border-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Reparación</button>
+        <button type="button" data-filtro="mantenimiento" aria-pressed="false" class="filtro min-h-11 cursor-pointer rounded-full border border-line bg-card px-4 text-sm font-semibold text-ink transition-colors duration-200 hover:border-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Mantenimiento</button>
+        <button type="button" data-filtro="altura" aria-pressed="false" class="filtro min-h-11 cursor-pointer rounded-full border border-line bg-card px-4 text-sm font-semibold text-ink transition-colors duration-200 hover:border-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Soluciones en altura</button>
+      </div>
+
+      <p id="trabajos-estado" class="sr-only" role="status" aria-live="polite">Mostrando 6 trabajos</p>
+
+      <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="obra reveal group" data-cat="construccion">
+          <a href="#contacto" class="block h-full overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <div class="relative overflow-hidden">
+              <div class="hatch grid-lines aspect-[4/3] w-full transition-transform duration-300 group-hover:scale-105"></div>
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-white backdrop-blur"><svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-camera"/></svg>Foto</span>
+            </div>
+            <div class="p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-accent-ink">Construcción · 2025</p>
+              <h3 class="mt-2 text-base font-bold text-ink">Ampliación de nave industrial</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Estructura metálica, cubierta y piso de hormigón.</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="obra reveal group" data-cat="altura">
+          <a href="#contacto" class="block h-full overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <div class="relative overflow-hidden">
+              <div class="hatch grid-lines aspect-[4/3] w-full transition-transform duration-300 group-hover:scale-105"></div>
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-white backdrop-blur"><svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-camera"/></svg>Foto</span>
+            </div>
+            <div class="p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-accent-ink">Altura · 2025</p>
+              <h3 class="mt-2 text-base font-bold text-ink">Reparación de fachada en 8 pisos</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Andamio, revisión del sellado y tratamiento de humedad.</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="obra reveal group" data-cat="reparacion">
+          <a href="#contacto" class="block h-full overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <div class="relative overflow-hidden">
+              <div class="hatch grid-lines aspect-[4/3] w-full transition-transform duration-300 group-hover:scale-105"></div>
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-white backdrop-blur"><svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-camera"/></svg>Foto</span>
+            </div>
+            <div class="p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-accent-ink">Reparación · 2024</p>
+              <h3 class="mt-2 text-base font-bold text-ink">Impermeabilización de azotea</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Retiro de carpeta, nivelado y nueva cobertura.</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="obra reveal group" data-cat="mantenimiento">
+          <a href="#contacto" class="block h-full overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <div class="relative overflow-hidden">
+              <div class="hatch grid-lines aspect-[4/3] w-full transition-transform duration-300 group-hover:scale-105"></div>
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-white backdrop-blur"><svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-camera"/></svg>Foto</span>
+            </div>
+            <div class="p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-accent-ink">Mantenimiento · 2024</p>
+              <h3 class="mt-2 text-base font-bold text-ink">Plan anual de edificio administrativo</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Visitas periódicas, informes y ajustes preventivos.</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="obra reveal group" data-cat="construccion">
+          <a href="#contacto" class="block h-full overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <div class="relative overflow-hidden">
+              <div class="hatch grid-lines aspect-[4/3] w-full transition-transform duration-300 group-hover:scale-105"></div>
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-white backdrop-blur"><svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-camera"/></svg>Foto</span>
+            </div>
+            <div class="p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-accent-ink">Construcción · 2023</p>
+              <h3 class="mt-2 text-base font-bold text-ink">Casa a nueva: obra gruesa y terminaciones</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Proyecto completo, del fundación al último detalle.</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="obra reveal group" data-cat="altura">
+          <a href="#contacto" class="block h-full overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <div class="relative overflow-hidden">
+              <div class="hatch grid-lines aspect-[4/3] w-full transition-transform duration-300 group-hover:scale-105"></div>
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-white backdrop-blur"><svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-camera"/></svg>Foto</span>
+            </div>
+            <div class="p-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-accent-ink">Altura · 2023</p>
+              <h3 class="mt-2 text-base font-bold text-ink">Instalación de cartelería sobre cubierta</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted-fg">Líneas de vida, plataformas y montaje con equipo de seguridad.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" aria-labelledby="contacto-t" class="bg-ink">
+    <div class="grid-lines">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-24">
+        <div class="reveal lg:col-span-5">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">04 / Contacto</p>
+          <h2 id="contacto-t" class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Pedí tu presupuesto</h2>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-slate-300">Contanos qué necesitás y te respondemos con una visita, el detalle del trabajo y el presupuesto por escrito. Sin compromiso.</p>
+
+          <ul class="mt-10 space-y-4">
+            <li>
+              <a href="tel:+540000000000" class="flex min-h-12 items-center gap-4 rounded-lg border border-white/10 px-4 py-3 transition-colors duration-200 hover:border-white/30 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <span><span class="block font-mono text-[11px] uppercase tracking-[0.14em] text-slate-400">Teléfono / WhatsApp</span><span class="block text-sm font-semibold text-white">+54 000 000-0000</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hola@martinferreira.com.ar" class="flex min-h-12 items-center gap-4 rounded-lg border border-white/10 px-4 py-3 transition-colors duration-200 hover:border-white/30 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <span><span class="block font-mono text-[11px] uppercase tracking-[0.14em] text-slate-400">Email</span><span class="block text-sm font-semibold text-white">hola@martinferreira.com.ar</span></span>
+              </a>
+            </li>
+            <li class="flex min-h-12 items-center gap-4 rounded-lg border border-white/10 px-4 py-3">
+              <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <span><span class="block font-mono text-[11px] uppercase tracking-[0.14em] text-slate-400">Zona de trabajo</span><span class="block text-sm font-semibold text-white">Ciudad y alrededores</span></span>
+            </li>
+            <li class="flex min-h-12 items-center gap-4 rounded-lg border border-white/10 px-4 py-3">
+              <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/10 text-accent-ink"><svg class="h-4 w-4" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <span><span class="block font-mono text-[11px] uppercase tracking-[0.14em] text-slate-400">Horario</span><span class="block text-sm font-semibold text-white">Lunes a viernes, 8 a 18 h</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal lg:col-span-7">
+          <form id="form-contacto" novalidate class="rounded-2xl border border-white/10 bg-white p-6 shadow-2xl shadow-black/30 sm:p-8">
+            <div id="resumen-errores" tabindex="-1" role="alert" aria-labelledby="resumen-errores-t" class="mb-6 hidden rounded-lg border-l-4 border-danger bg-red-50 p-4">
+              <h3 id="resumen-errores-t" class="text-sm font-bold text-red-900">Revisá estos campos:</h3>
+              <ul id="resumen-errores-lista" class="mt-2 space-y-1 text-sm text-red-800"></ul>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="nombre" class="mb-1.5 block text-sm font-semibold text-ink">Nombre y apellido</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" class="field" placeholder="Ej: Ana Gómez" required aria-describedby="err-nombre">
+                <p id="err-nombre" class="mt-1.5 hidden text-sm font-medium text-danger"></p>
+              </div>
+              <div>
+                <label for="telefono" class="mb-1.5 block text-sm font-semibold text-ink">Teléfono <span class="font-normal text-muted-fg">(opcional)</span></label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel" class="field" placeholder="Ej: 11 0000-0000" aria-describedby="err-telefono">
+                <p id="err-telefono" class="mt-1.5 hidden text-sm font-medium text-danger"></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="email" class="mb-1.5 block text-sm font-semibold text-ink">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" class="field" placeholder="Ej: ana@correo.com" required aria-describedby="ayuda-email err-email">
+                <p id="ayuda-email" class="mt-1.5 text-sm text-muted-fg">Te respondemos a este correo con el presupuesto.</p>
+                <p id="err-email" class="mt-1.5 hidden text-sm font-medium text-danger"></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="servicio" class="mb-1.5 block text-sm font-semibold text-ink">Tipo de trabajo</label>
+                <div class="relative">
+                  <select id="servicio" name="servicio" class="field appearance-none pr-10">
+                    <option value="">Elegí una opción</option>
+                    <option value="construccion">Construcción</option>
+                    <option value="reparacion">Reparación</option>
+                    <option value="mantenimiento">Mantenimiento</option>
+                    <option value="altura">Soluciones en altura</option>
+                    <option value="otro">Otro / no estoy seguro</option>
+                  </select>
+                  <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-fg" aria-hidden="true"><use href="#i-chevron"/></svg>
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="mensaje" class="mb-1.5 block text-sm font-semibold text-ink">Contanos qué necesitás</label>
+                <textarea id="mensaje" name="mensaje" rows="4" class="field resize-y" placeholder="Dirección, qué hay que hacer, plazos…" required aria-describedby="ayuda-mensaje err-mensaje"></textarea>
+                <p id="ayuda-mensaje" class="mt-1.5 text-sm text-muted-fg">Mínimo 10 caracteres. Si es urgente, llámanos por teléfono.</p>
+                <p id="err-mensaje" class="mt-1.5 hidden text-sm font-medium text-danger"></p>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-start gap-3">
+              <input id="acepto" name="acepto" type="checkbox" class="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded border-line accent-[#EA580C]" aria-describedby="err-acepto">
+              <label for="acepto" class="text-sm leading-relaxed text-muted-fg">Acepto que me contacten por teléfono o email para responder esta consulta.</label>
+            </div>
+            <p id="err-acepto" class="mt-1.5 hidden text-sm font-medium text-danger">Necesitamos tu autorización para poder contactarte.</p>
+
+            <button id="enviar" type="submit" class="mt-7 inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-accent px-6 text-base font-semibold text-on-accent transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0">
+              <span id="enviar-texto">Solicitar presupuesto</span>
+              <svg id="enviar-icono" class="h-4 w-4" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+
+            <p id="form-ok" role="status" tabindex="-1" style="display:none" class="mt-4 items-start gap-3 rounded-lg border-l-4 border-emerald-600 bg-emerald-50 p-4 text-sm text-emerald-900">
+              <svg class="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true"><use href="#i-check"/></svg>
+              <span>Gracias. Recibimos tu consulta y te contactamos en el próximo horario hábil.</span>
+            </p>
+
+            <p class="mt-4 text-center text-xs text-muted-fg">Datos de contacto y dominio de ejemplo: reemplazalos con los reales antes de publicar.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-line bg-bg">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div class="reveal flex flex-col items-start justify-between gap-6 rounded-2xl border border-line bg-card p-8 md:flex-row md:items-center lg:p-10">
+        <div>
+          <h2 class="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">¿Arrancamos con tu obra?</h2>
+          <p class="mt-2 max-w-xl text-base leading-relaxed text-muted-fg">Contanos el proyecto y te devolvemos un presupuesto claro, con plazo y garantía, por escrito.</p>
+        </div>
+        <a href="#contacto" class="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-md bg-ink px-6 text-base font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Solicitar presupuesto<svg class="h-4 w-4" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-white/10 bg-ink">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-md bg-accent font-mono text-sm font-bold text-on-accent">MF</span>
+          <span class="leading-tight">
+            <span class="block text-sm font-bold text-white">Martin Ferreira</span>
+            <span class="block font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Construcciones</span>
+          </span>
+        </div>
+        <p class="mt-5 max-w-sm font-serif text-lg italic leading-snug text-slate-300">Construcción, reparación y mantenimiento. Soluciones en altura.</p>
+        <p class="mt-4 text-sm text-slate-400">Presupuestos y garantías por escrito.</p>
+      </div>
+
+      <div class="md:col-span-3">
+        <h2 class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Navegación</h2>
+        <ul class="mt-4 space-y-1">
+          <li><a href="#servicios" class="inline-flex min-h-11 items-center text-sm text-slate-300 transition-colors duration-200 hover:text-white">Servicios</a></li>
+          <li><a href="#nosotros" class="inline-flex min-h-11 items-center text-sm text-slate-300 transition-colors duration-200 hover:text-white">Nosotros</a></li>
+          <li><a href="#trabajos" class="inline-flex min-h-11 items-center text-sm text-slate-300 transition-colors duration-200 hover:text-white">Trabajos</a></li>
+          <li><a href="#contacto" class="inline-flex min-h-11 items-center text-sm text-slate-300 transition-colors duration-200 hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <h2 class="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400">Contacto</h2>
+        <ul class="mt-4 space-y-3 text-sm text-slate-300">
+          <li><a href="tel:+540000000000" class="inline-flex min-h-11 items-center gap-2 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"><svg class="h-4 w-4 text-accent-ink" aria-hidden="true"><use href="#i-phone"/></svg>+54 000 000-0000</a></li>
+          <li><a href="mailto:hola@martinferreira.com.ar" class="inline-flex min-h-11 items-center gap-2 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"><svg class="h-4 w-4 text-accent-ink" aria-hidden="true"><use href="#i-mail"/></svg>hola@martinferreira.com.ar</a></li>
+          <li class="flex min-h-11 items-center gap-2"><svg class="h-4 w-4 text-accent-ink" aria-hidden="true"><use href="#i-clock"/></svg>Lunes a viernes, 8 a 18 h</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span id="anio">2026</span> Martin Ferreira Construcciones. Prototipo.</p>
+      <p>Datos de contacto, imágenes y avisos legales de ejemplo.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var navToggle = document.getElementById('nav-toggle');
+    var navMovil = document.getElementById('nav-movil');
+    var menuIcon = '<svg class="h-5 w-5" aria-hidden="true"><use href="#i-menu"/></svg>';
+    var closeIcon = '<svg class="h-5 w-5" aria-hidden="true"><use href="#i-close"/></svg>';
+
+    navToggle.addEventListener('click', function () {
+      var abierto = navMovil.classList.toggle('hidden') === false;
+      navToggle.setAttribute('aria-expanded', String(abierto));
+      navToggle.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+      navToggle.innerHTML = abierto ? closeIcon : menuIcon;
+    });
+
+    navMovil.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        navMovil.classList.add('hidden');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+        navToggle.innerHTML = menuIcon;
+      }
+    });
+
+    var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    var mostrar = function (el) { el.classList.add('is-in'); };
+
+    reveals.forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.95) mostrar(el);
+    });
+
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            mostrar(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px' });
+      reveals.forEach(function (el) { if (!el.classList.contains('is-in')) obs.observe(el); });
+    } else {
+      reveals.forEach(mostrar);
+    }
+
+    window.setTimeout(function () { reveals.forEach(mostrar); }, 2000);
+
+    var botones = document.querySelectorAll('.filtro');
+    var obras = document.querySelectorAll('.obra');
+    var estado = document.getElementById('trabajos-estado');
+
+    botones.forEach(function (boton) {
+      boton.addEventListener('click', function () {
+        var filtro = boton.dataset.filtro;
+        var visibles = 0;
+
+        botones.forEach(function (b) {
+          var activo = b === boton;
+          b.setAttribute('aria-pressed', String(activo));
+          b.classList.toggle('bg-ink', activo);
+          b.classList.toggle('text-white', activo);
+          b.classList.toggle('border-ink', activo);
+          b.classList.toggle('border-line', !activo);
+          b.classList.toggle('bg-card', !activo);
+        });
+
+        obras.forEach(function (obra) {
+          var mostrar = filtro === 'todos' || obra.dataset.cat === filtro;
+          obra.classList.toggle('hidden', !mostrar);
+          if (mostrar) visibles++;
+        });
+
+        estado.textContent = 'Mostrando ' + visibles + (visibles === 1 ? ' trabajo' : ' trabajos');
+      });
+    });
+
+    var form = document.getElementById('form-contacto');
+    var resumen = document.getElementById('resumen-errores');
+    var resumenLista = document.getElementById('resumen-errores-lista');
+    var ok = document.getElementById('form-ok');
+    var boton = document.getElementById('enviar');
+    var textoBoton = document.getElementById('enviar-texto');
+    var iconoBoton = document.getElementById('enviar-icono');
+
+    var reglas = [
+      { id: 'nombre', err: 'err-nombre', test: function (v) { return v.trim().length >= 2; }, msg: 'Escribí tu nombre y apellido.' },
+      { id: 'email', err: 'err-email', test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); }, msg: 'Escribí un email válido, por ejemplo ana@correo.com.' },
+      { id: 'mensaje', err: 'err-mensaje', test: function (v) { return v.trim().length >= 10; }, msg: 'Contanos un poco más: al menos 10 caracteres.' },
+      { id: 'acepto', err: 'err-acepto', test: function (v, el) { return el.checked; }, msg: 'Necesitamos tu autorización para poder contactarte.' }
+    ];
+
+    function mostrarError(regla, valido) {
+      var input = document.getElementById(regla.id);
+      var destino = document.getElementById(regla.err);
+      if (valido) {
+        input.removeAttribute('aria-invalid');
+        destino.classList.add('hidden');
+        destino.textContent = '';
+      } else {
+        input.setAttribute('aria-invalid', 'true');
+        destino.textContent = regla.msg;
+        destino.classList.remove('hidden');
+      }
+      return valido;
+    }
+
+    reglas.forEach(function (regla) {
+      var input = document.getElementById(regla.id);
+      var evento = input.type === 'checkbox' || input.tagName === 'SELECT' ? 'change' : 'blur';
+      input.addEventListener(evento, function () {
+        mostrarError(regla, regla.test(input.value, input));
+        if (resumen.classList.contains('hidden') === false) validarTodo();
+      });
+    });
+
+    function validarTodo() {
+      var errores = [];
+      reglas.forEach(function (regla) {
+        var input = document.getElementById(regla.id);
+        if (!mostrarError(regla, regla.test(input.value, input))) errores.push(regla);
+      });
+      return errores;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      ok.style.display = 'none';
+
+      var errores = validarTodo();
+
+      if (errores.length > 0) {
+        resumenLista.innerHTML = '';
+        errores.forEach(function (regla) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = '#' + regla.id;
+          a.className = 'cursor-pointer font-medium underline underline-offset-2';
+          a.textContent = regla.msg;
+          a.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            document.getElementById(regla.id).focus();
+          });
+          li.appendChild(a);
+          resumenLista.appendChild(li);
+        });
+        resumen.classList.remove('hidden');
+        resumen.focus();
+        return;
+      }
+
+      resumen.classList.add('hidden');
+      boton.disabled = true;
+      textoBoton.textContent = 'Enviando…';
+      iconoBoton.innerHTML = '<use href="#i-clock"/>';
+
+      window.setTimeout(function () {
+        boton.disabled = false;
+        textoBoton.textContent = 'Solicitar presupuesto';
+        iconoBoton.innerHTML = '<use href="#i-arrow-right"/>';
+        ok.style.display = 'flex';
+        form.reset();
+        ok.focus();
+      }, 900);
+    });
+
+    document.getElementById('anio').textContent = new Date().getFullYear();
+  })();
+</script>
+
+</body>
+</html>
